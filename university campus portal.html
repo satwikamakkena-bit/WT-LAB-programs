@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Campus Life Portal</title>
+    
+    <!-- All the CSS code is wrapped properly inside this style tag so it designs the page instead of showing as text -->
+    <style>
+        /* --- Root Variables & Reset --- */
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2b6cb0;
+            --text-color: #2d3748;
+            --bg-light: #f7fafc;
+            --white: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* --- Header --- */
+        .main-header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+
+        .main-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- Navbar --- */
+        .navbar {
+            background-color: var(--secondary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar ul li a {
+            display: block;
+            color: var(--white);
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* --- Main Layout & Sections --- */
+        .portal-section {
+            background-color: var(--white);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .portal-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .portal-section p {
+            margin-bottom: 1rem;
+        }
+
+        /* --- Grid Systems --- */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 6px;
+            background-color: #fff;
+        }
+
+        .card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- Unique Content UI Styles --- */
+        .highlight-box {
+            background-color: #ebf8ff;
+            border-left: 5px solid var(--secondary-color);
+            padding: 1rem;
+            margin-top: 1.5rem;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .facility-badge {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem;
+            text-align: center;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        .portal-section ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .portal-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- Data Table --- */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .info-table th, .info-table td {
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            text-align: left;
+        }
+
+        .info-table th {
+            background-color: #edf2f7;
+            color: var(--primary-color);
+        }
+
+        /* --- Footer --- */
+        .main-footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <h1>Vignan Campus Life Portal</h1>
+            <p>Your one-stop destination to explore hostels, sports, clubs, and facilities</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="#hostels">Hostels</a></li>
+                <li><a href="#sports">Sports & Gym</a></li>
+                <li><a href="#clubs">Clubs & Cultural</a></li>
+                <li><a href="#library">NTR Library</a></li>
+                <li><a href="#transport">Transportation</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="container">
+        
+        <!-- Hostels Section -->
+        <section id="hostels" class="portal-section">
+            <h2>On-Campus Accommodation (Hostels)</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Boys Hostel</h3>
+                    <p>Comfortable on-campus housing accommodating up to 1,300 students. Offers AC Deluxe, premium AC, and standard non-AC rooms with uninterrupted 24/7 Wi-Fi connectivity.</p>
+                </div>
+                <div class="card">
+                    <h3>Girls Hostel</h3>
+                    <p>Secure residential facilities housing up to 1,200 students. Complete with modern dining halls, trained security guards, and premium welfare committees.</p>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <strong>Medical Care:</strong> In-campus Health Care Center staffed with resident doctors and nurses. Includes a 24/7 emergency ambulance dispatch service.
+            </div>
+        </section>
+
+        <!-- Sports Section -->
+        <section id="sports" class="portal-section">
+            <h2>Sports, Fitness & Recreation</h2>
+            <p>Physical education and fitness programs are actively supported by specialized coaches and physical directors.</p>
+            <div class="grid-3">
+                <div class="facility-badge">Outdoor Track & Courts (400m Track, Cricket, Football)</div>
+                <div class="facility-badge">Indoor Sports Complex (Badminton, Table Tennis)</div>
+                <div class="facility-badge">Modern Gym & Physical Fitness Center</div>
+            </div>
+        </section>
+
+        <!-- Clubs Section -->
+        <section id="clubs" class="portal-section">
+            <h2>Student Activities Council (SAC) & Clubs</h2>
+            <p>Explore your inner talents across 40+ optional co-curricular and extra-curricular clubs managed directly by the student body.</p>
+            <ul>
+                <li><strong>Student Activity Core (SAC):</strong> Logistics, cultural, and technical event planning divisions.</li>
+                <li><strong>National Bodies:</strong> Elite structural chapters of NCC and NSS groups.</li>
+                <li><strong>Vignan Mahotsav:</strong> The landmark annual National Level Youth Festival showcasing cross-college talent every February.</li>
+            </ul>
+        </section>
+
+        <!-- Library Section -->
+        <section id="library" class="portal-section">
+            <h2>NTR Central Library</h2>
+            <div class="library-content">
+                <p>The academic hub of the campus, holding over <strong>1,20,100+ structural volumes</strong> and 280+ national printing journals. It features an advanced Digital Section providing seamless entry to e-journals, virtual engineering programming labs, and quiet study domains open 24/7.</p>
+            </div>
+        </section>
+
+        <!-- Transportation Section -->
+        <section id="transport" class="portal-section">
+            <h2>Campus Fleet & Transportation</h2>
+            <p>A robust transit infrastructure designed to support daily commuting requirements seamlessly.</p>
+            <table class="info-table">
+                <thead>
+                    <tr>
+                        <th>Service Asset</th>
+                        <th>Coverage Radius</th>
+                        <th>Key Logistics</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>46-60 Dedicated Campus Buses</td>
+                        <td>45 - 50 KM Regional Network</td>
+                        <td>Connects Guntur, Vijayawada, and surrounding regions safely.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Web Technologies Lab Project. Designed for Static Webpage Submission Requirements.</p>
+    </footer>
+
+</body>
+</html>
